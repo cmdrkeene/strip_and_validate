@@ -46,8 +46,6 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 				<string>Validate Syntax</string>
 				<key>output</key>
 				<string>showAsTooltip</string>
-				<key>scope</key>
-				<string>source.ruby</string>
 				<key>uuid</key>
 				<string>EE5F19BA-6C02-11D9-92BA-0011242E4184</string>
 			</dict>
@@ -74,6 +72,8 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 	</array>
 	<key>keyEquivalent</key>
 	<string>@s</string>
+        <key>source</key>
+        <string>source.ruby, text.html.ruby</string>
 	<key>name</key>
 	<string>Strip Whitespace and Validate Syntax</string>
 	<key>uuid</key>
