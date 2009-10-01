@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>commands</key>
+	<array>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>perl -pe 's/[\t ]+$//g'</string>
+				<key>fallbackInput</key>
+				<string>document</string>
+				<key>input</key>
+				<string>selection</string>
+				<key>name</key>
+				<string>Remove Trailing Spaces in Document / Selection</string>
+				<key>output</key>
+				<string>replaceSelectedText</string>
+				<key>uuid</key>
+				<string>0F8C1F78-6E4C-11D9-91AF-000D93589AF6</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>nop</string>
+				<key>command</key>
+				<string>#!/usr/bin/env ruby
+require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
+puts `"${TM_RUBY:=ruby}" -e'puts "Using ruby-" + RUBY_VERSION.to_s'`
+result = `"${TM_RUBY:=ruby}" -wc 2&gt;&amp;1`
+puts result
+TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
+</string>
+				<key>input</key>
+				<string>document</string>
+				<key>keyEquivalent</key>
+				<string>^V</string>
+				<key>name</key>
+				<string>Validate Syntax</string>
+				<key>output</key>
+				<string>showAsTooltip</string>
+				<key>scope</key>
+				<string>source.ruby</string>
+				<key>uuid</key>
+				<string>EE5F19BA-6C02-11D9-92BA-0011242E4184</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+		<dict>
+			<key>argument</key>
+			<dict>
+				<key>beforeRunningCommand</key>
+				<string>saveActiveFile</string>
+				<key>input</key>
+				<string>none</string>
+				<key>name</key>
+				<string>Save Document</string>
+				<key>output</key>
+				<string>discard</string>
+				<key>uuid</key>
+				<string>74D1EA62-D7F0-4F01-832F-B9FD11757B66</string>
+			</dict>
+			<key>command</key>
+			<string>executeCommandWithOptions:</string>
+		</dict>
+	</array>
+	<key>keyEquivalent</key>
+	<string>@s</string>
+	<key>name</key>
+	<string>Strip Whitespace and Validate Syntax</string>
+	<key>uuid</key>
+	<string>92C63051-3957-42A7-B741-64F21684DEA0</string>
+</dict>
+</plist>

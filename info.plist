@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Strip and Validate</string>
+	<key>ordering</key>
+	<array>
+		<string>74D1EA62-D7F0-4F01-832F-B9FD11757B66</string>
+	</array>
+	<key>uuid</key>
+	<string>F591E55B-558B-468B-9D77-56470C4EF646</string>
+</dict>
+</plist>
