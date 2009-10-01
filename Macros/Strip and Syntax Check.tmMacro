@@ -72,7 +72,7 @@ TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 	</array>
 	<key>keyEquivalent</key>
 	<string>@s</string>
-        <key>source</key>
+        <key>scope</key>
         <string>source.ruby, text.html.ruby</string>
 	<key>name</key>
 	<string>Strip Whitespace and Validate Syntax</string>
