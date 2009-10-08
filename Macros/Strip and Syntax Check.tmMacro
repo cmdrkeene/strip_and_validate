@@ -35,7 +35,8 @@
 require ENV['TM_SUPPORT_PATH'] + '/lib/textmate'
 ruby_version = `"${TM_RUBY:=ruby}" -e'puts "Using ruby-" + RUBY_VERSION.to_s'`
 result = `"${TM_RUBY:=ruby}" -wc -W1 2&gt;&amp;1`
-puts ruby_version + result unless result =~ /^Syntax OK/
+result.gsub!(/Syntax OK/, '')
+puts ruby_version + result if result =~ /-/
 TextMate.go_to :line =&gt; $1 if result =~ /-:(\d+):/
 </string>
 				<key>input</key>
